@@ -1,0 +1,107 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'publish' ]
+2 info using npm@2.15.11
+3 info using node@v4.8.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/dennis/nodejs-mods/browserify-standalone',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/dennis/.npm/browserify-standalone/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /home/dennis/.npm correctMkdir not in flight; initializing
+10 verbose tar pack [ '/home/dennis/.npm/browserify-standalone/1.0.0/package.tgz',
+10 verbose tar pack   '/home/dennis/nodejs-mods/browserify-standalone' ]
+11 verbose tarball /home/dennis/.npm/browserify-standalone/1.0.0/package.tgz
+12 verbose folder /home/dennis/nodejs-mods/browserify-standalone
+13 info prepublish browserify-standalone@1.0.0
+14 verbose addLocalTarball adding from inside cache /home/dennis/.npm/browserify-standalone/1.0.0/package.tgz
+15 verbose correctMkdir /home/dennis/.npm correctMkdir not in flight; initializing
+16 silly cache afterAdd browserify-standalone@1.0.0
+17 verbose afterAdd /home/dennis/.npm/browserify-standalone/1.0.0/package/package.json not in flight; writing
+18 verbose correctMkdir /home/dennis/.npm correctMkdir not in flight; initializing
+19 verbose afterAdd /home/dennis/.npm/browserify-standalone/1.0.0/package/package.json written
+20 silly publish { name: 'browserify-standalone',
+20 silly publish   version: '1.0.0',
+20 silly publish   description: 'Run browserify-standalone in a npm package and make a standalone build of the package.',
+20 silly publish   main: 'index.js',
+20 silly publish   bin: { 'browserify-standalone': 'cli.js' },
+20 silly publish   dependencies: {},
+20 silly publish   devDependencies: {},
+20 silly publish   scripts: { test: 'test.js' },
+20 silly publish   repository:
+20 silly publish    { type: 'git',
+20 silly publish      url: 'git+https://github.com/diversen/browserify-standalone.git' },
+20 silly publish   author: { name: 'dennis iversen' },
+20 silly publish   license: 'MIT',
+20 silly publish   bugs: { url: 'https://github.com/diversen/browserify-standalone/issues' },
+20 silly publish   keywords: [ 'browserify' ],
+20 silly publish   homepage: 'https://github.com/diversen/browserify-standalone#readme',
+20 silly publish   readme: '# browserify-standalone\n\nRun browserify-standalone in a npm package and make a standalone build of the package. \n\nBasicly a simple wrapper around browserify that does something like this: \n\n    mkdir -p dist && browserify moduleMain -s moduleName > dist/moduleName.js\n\nThis makes a dist/moduleName.js file based on \'main\' and \'name\' in package.json\n\nMIT © [Dennis Iversen](https://github.com/diversen)\n',
+20 silly publish   readmeFilename: 'README.md',
+20 silly publish   gitHead: '578acc1cdcf5a445159647aeb04a4af371c6e823',
+20 silly publish   _id: 'browserify-standalone@1.0.0',
+20 silly publish   _shasum: '6059269e48880da6c39678c7b3ef3c0a4421cd54',
+20 silly publish   _from: '.' }
+21 verbose getPublishConfig undefined
+22 silly mapToRegistry name browserify-standalone
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: 'browserify-standalone',
+25 silly mapToRegistry   scope: null,
+25 silly mapToRegistry   name: 'browserify-standalone',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/browserify-standalone
+27 verbose publish registryBase https://registry.npmjs.org/
+28 silly publish uploading /home/dennis/.npm/browserify-standalone/1.0.0/package.tgz
+29 verbose request uri https://registry.npmjs.org/browserify-standalone
+30 verbose request sending authorization for write operation
+31 info attempt registry request try #1 at 5:37:23 PM
+32 verbose request using bearer token for auth
+33 verbose request id 5e3accb335386934
+34 http request PUT https://registry.npmjs.org/browserify-standalone
+35 http 403 https://registry.npmjs.org/browserify-standalone
+36 verbose headers { 'content-type': 'application/json',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'content-length': '115',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Sun, 02 Jul 2017 15:37:29 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-hhn1528-HHN',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1499009849.052558,VS0,VE642',
+36 verbose headers   vary: 'Accept-Encoding' }
+37 verbose request invalidating /home/dennis/.npm/registry.npmjs.org/browserify-standalone on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: you do not have permission to publish "browserify-standalone". Are you logged in as the correct user? : browserify-standalone
+39 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+39 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+39 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:187:22)
+39 verbose stack     at emitTwo (events.js:87:13)
+39 verbose stack     at Request.emit (events.js:172:7)
+39 verbose stack     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+39 verbose stack     at emitOne (events.js:77:13)
+39 verbose stack     at Request.emit (events.js:169:7)
+39 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:965:12)
+40 verbose statusCode 403
+41 verbose pkgid browserify-standalone
+42 verbose cwd /home/dennis/nodejs-mods/browserify-standalone
+43 error Linux 4.4.0-72-generic
+44 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish"
+45 error node v4.8.1
+46 error npm  v2.15.11
+47 error code E403
+48 error you do not have permission to publish "browserify-standalone". Are you logged in as the correct user? : browserify-standalone
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
