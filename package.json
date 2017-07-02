@@ -16,7 +16,7 @@
     "url": "git+https://github.com/diversen/browserify-standalone.git"
   },
   "author": "dennis iversen",
-  "license": "MIT",
+  "licenses": "MIT",
   "bugs": {
     "url": "https://github.com/diversen/browserify-standalone/issues"
   },
