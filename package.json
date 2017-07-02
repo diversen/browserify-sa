@@ -10,7 +10,6 @@
   "devDependencies": {},
   "scripts": {
     "test": "test.js"
-vim RE	
   },
   "repository": {
     "type": "git",
