@@ -5,6 +5,10 @@
 Install global: 
 
     sudo npm install browserify-sa -g
+    
+You will need browserify and uglify-js in recent versions as global installs: 
+
+    sudo  npm install -g uglify-js browserify
 
 ## Usage
 
