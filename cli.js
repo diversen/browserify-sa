@@ -5,6 +5,8 @@ var file = cwd + '/package.json'
 var json = require(file);
 var command = 'mkdir -p dist &&';
 
+var m = require('minimist-mini')();
+
 var infoAry = new Array();
 infoAry.push("Package: " + json.name);
 infoAry.push("Version: " + json.version);
@@ -22,9 +24,13 @@ if (json.homepage) {
 
 var infoStr = infoAry.join('. ')
 
-command+= "(printf  '/*" +infoStr +"   */ '";
+command+= "(printf  '/* " +infoStr +"   */ '";
 command+=' && browserify ' + json.main + '  -s ' + json.name;
-command+= ' |  uglifyjs ) ' 
+
+if (m.get('uglify')) {
+    command+= ' |  uglifyjs';
+}
+command+= ') ';
 command+= ' > dist/' + json.name + '.js';
 
 var exec = require('child_process').exec;

@@ -1,22 +1,10 @@
 # browserify-sa
 
-## Install 
-
-Install global: 
-
-    sudo npm install browserify-sa -g
-    
-You will need browserify and uglify-js in recent versions as global installs: 
-
-    sudo  npm install -g uglify-js browserify
+Run browserify-sa in a npm package and make a standalone build of the package. 
 
 ## Usage
 
-Single command, no options.
-
-    browserify-sa 
-
-Run this command in a npm package and make a standalone build of the package. 
+    browserify-sa
 
 Basicly a simple wrapper around browserify that does something like this: 
 
@@ -24,6 +12,12 @@ Basicly a simple wrapper around browserify that does something like this:
 
 This makes a dist/moduleName.js file based on 'main' and 'name' in package.json
 
-The build also includes common package.json fields like author and license.
+# Options
+
+Only option is `uglify` - which will uglify the `dist` build. Uglify will
+not always work with e.g. `string literals`. Therefor it is needed to 
+specify it. 
+
+    browserify-sa --uglify
 
 MIT © [Dennis Iversen](https://github.com/diversen)

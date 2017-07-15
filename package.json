@@ -1,27 +1,29 @@
 {
   "name": "browserify-sa",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Run browserify-sa in a npm package and make a standalone build of the package.",
   "main": "index.js",
   "bin": {
     "browserify-sa": "cli.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "minimist-mini": "^2.0.7"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diversen/browserify-sa.git"
+    "url": "git+https://github.com/diversen/browserify-standalone.git"
   },
   "author": "dennis iversen",
   "licenses": "MIT",
   "bugs": {
-    "url": "https://github.com/diversen/browserify-sa/issues"
+    "url": "https://github.com/diversen/browserify-standalone/issues"
   },
   "keywords": [
     "browserify"
   ],
-  "homepage": "https://github.com/diversen/browserify-sa#readme"
+  "homepage": "https://github.com/diversen/browserify-standalone#readme"
 }
