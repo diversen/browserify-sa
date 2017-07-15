@@ -1,12 +1,14 @@
 # browserify-sa
 
-Run browserify-sa in a npm package and make a standalone build of the package. 
+Run `browserify-sa` in a npm package and make a standalone build of the package. 
 
 ## Requirements
 
-You will need a global install of browserify. 
+You will need a global install of `browserify`. 
 
 ## Usage
+
+Just run the command in the module you would like to make, like this: 
 
     browserify-sa
 
@@ -16,14 +18,14 @@ Basicly a simple wrapper around browserify that does something like this:
 
 This makes a dist/moduleName.js file based on 'main' and 'name' in package.json
 
-# Options
+## Options
 
 Only option is `uglify` - which will uglify the `dist` build. Uglify will
 not always work with e.g. `string literals`. Therefor it is needed to 
-specify it. 
+specify it:
 
     browserify-sa --uglify
 
-Inf order to use uglify, you will need uglify.js installed global. 
+In order to use `uglify`, you will need `uglify.js` installed global. 
 
 MIT © [Dennis Iversen](https://github.com/diversen)
