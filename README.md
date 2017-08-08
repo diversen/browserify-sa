@@ -32,4 +32,7 @@ specify it:
 
 In order to use `uglify`, you will need `uglify.js` installed global. 
 
+    sudo npm install -g uglify-js
+
+
 MIT © [Dennis Iversen](https://github.com/diversen)
