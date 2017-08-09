@@ -6,6 +6,8 @@ Run `browserify-sa` in a npm package and make a standalone build of the package.
 
 You will need a global install of `browserify`. 
 
+    sudo npm install browserify -g
+
 ## Install
 
     sudo npm install browserify-sa -g
