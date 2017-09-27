@@ -26,11 +26,11 @@ This makes a `dist/module-name.js` file based on the 'main' and 'name' fields in
 
 ## Options
 
-Only option is `--uglify` or `-u` - which will shorten and uglify the `dist` build. Uglify will
-not always work with e.g. `string literals`. Therefor it is needed to 
-specify it:
+`n` or `name` is the name of the export.
 
-    browserify-sa -u
+`--uglify` or `-u` - will shorten and uglify the `dist` build. Uglify will not always work with e.g. `string literals`.
+
+    browserify-sa -u --n helloWorld
 
 In order to use `uglify`, you will need `uglify.js` installed global. 
 

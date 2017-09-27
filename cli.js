@@ -8,13 +8,15 @@ var command = 'mkdir -p dist &&';
 var m = require('minimist-mini')();
 
 if (m.get('help') || m.get('h')) {
-    console.log('help');
     m.helpMessage();
     process.exit()
 }
 
+
 var infoAry = new Array();
+
 infoAry.push("Package: " + json.name);
+
 infoAry.push("Version: " + json.version);
 if (json.license) {
     infoAry.push("License: " + json.license);
@@ -26,6 +28,16 @@ if (json.author) {
 
 if (json.homepage) {
     infoAry.push( "Homepage: " + json.homepage);
+}
+
+// The name of the build
+// Else it is just the package name
+if (m.get('name')) {
+    json.name = m.get('name')
+}
+
+if (m.get('n')) {
+    json.name = m.get('n')
 }
 
 var infoStr = infoAry.join('. ')
