@@ -1,6 +1,6 @@
 {
   "name": "browserify-sa",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Run browserify-sa in a npm package and make a standalone build of the package.",
   "main": "index.js",
   "bin": {

@@ -26,11 +26,13 @@ This makes a `dist/module-name.js` file based on the 'main' and 'name' fields in
 
 ## Options
 
-`n` or `name` is the name of the export.
+If you want another name for the the exposed variable name, you can specify: 
+
+`-n` or `--name` the name of the export, the global variable exposed.
+
+Uglify: 
 
 `--uglify` or `-u` - will shorten and uglify the `dist` build. Uglify will not always work with e.g. `string literals`.
-
-    browserify-sa -u --n helloWorld
 
 In order to use `uglify`, you will need `uglify.js` installed global. 
 
